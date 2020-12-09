@@ -147,6 +147,8 @@ switch($magnitude){
     ?>
 
 <?php
+    var_dump($gender);
+
     if($gender != 'Homme'){
         echo 'C\'est une développeuse !!!';
     } else { 
@@ -162,6 +164,7 @@ switch($magnitude){
     ?>
 
 <?php
+var_dump($age);
     if($age >= 18){
         echo 'Tu es majeur';
     } else {

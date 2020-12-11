@@ -55,21 +55,23 @@ En fonction de l'âge et du genre afficher la phrase correspondante :
 Gérer tous les cas. </p>
 
 <?php
-$age = 14;
-$gender = 'Homme';
+$age = 31;
+$gender = strtolower('Homme');
 
-if($gender == 'Homme'){
-    if($age >= 18){
+if($gender == 'homme' && $age>0){
+    if($age >= 18 && $age < 120){
         echo 'vous êtes un homme et majeur';
     } else {
         echo 'vous êtes un homme et mineur';
     }
-} else {
-    if($age >= 18){
-        echo 'vous êtes une femme et majeur';
+} else if($gender == 'femme' && $age>0) {
+    if($age >= 18 && $age < 120){
+        echo 'vous êtes une femme et majeure';
     } else {
-        echo 'vous êtes une femme et mineur';
+        echo 'vous êtes une femme et mineure';
     }
+} else {
+    echo 'vous n\'avez pas renseigné au moins un des paramètres';
 }
 ?>
 
